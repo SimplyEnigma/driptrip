@@ -74,7 +74,7 @@ export function renderOrderSummary() {
       const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
       const dateString = deliveryDate.format("dddd, MMMM D");
       const priceString =
-        deliveryOptions.priceCents === 0
+        deliveryOption.priceCents === 0
           ? "FREE"
           : `$${formatCurrency(deliveryOption.priceCents)}`;
       const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
