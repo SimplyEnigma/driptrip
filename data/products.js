@@ -68,12 +68,15 @@ export function loadProductsFetch() {
 
         return new Product(productDetails);
       });
+    })
+    .catch((error) => {
+      console.log("Unexpected Error");
     });
 
   return promise;
 }
 // After Loading loadProductsFetch, code above below can be used to continue the function
-loadProductsFetch().then(() => {});
+// loadProductsFetch().then(() => {});
 
 export function loadProducts(fun) {
   const xhr = new XMLHttpRequest();
@@ -88,7 +91,9 @@ export function loadProducts(fun) {
     });
     fun();
   });
-
+  xhr.addEventListener("error", () => {
+    console.log("Error Detected");
+  });
   xhr.open("GET", "https://supersimplebackend.dev/products");
   xhr.send();
 }

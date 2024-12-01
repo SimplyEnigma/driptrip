@@ -4,6 +4,21 @@ import { loadProducts, loadProductsFetch } from "../data/products.js";
 // import "../data/cart-class.js";
 // import "../data/backend-practice.js";
 
+async function loadPage() {
+  console.log("Loading Page");
+  try {
+    // throw "error1";
+    await loadProductsFetch();
+    const value = await new Promise((resolve, reject) => {
+      loadCart(() => {
+        resolve("value3");
+      });
+    });
+  } catch (error) {
+    console.log("Unexpected Error");
+  }
+}
+
 Promise.all([loadProductsFetch()]).then(() => {
   renderOrderSummary();
   renderPaymentSummary();
