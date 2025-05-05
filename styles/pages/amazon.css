@@ -78,6 +78,11 @@
   flex-direction: column;
 }
 
+.product-container:hover {
+  box-shadow: 0 0 30px #ccc;
+  border-radius: 8px;
+}
+
 .product-image-container {
   display: flex;
   justify-content: center;

@@ -1,5 +1,6 @@
 .amazon-header {
-  background-color: rgb(19, 25, 33);
+  /* background-color: rgb(19, 25, 33); */
+  background-color: #ccc;
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -81,7 +82,8 @@
 }
 
 .search-button {
-  background-color: rgb(254, 189, 105);
+  /* background-color: rgb(254, 189, 105); */
+  background-color: rgb(19, 25, 33);
   border: none;
   width: 45px;
   height: 40px;
@@ -104,7 +106,8 @@
 }
 
 .orders-link {
-  color: white;
+  /* color: white; */
+  color: #666;
 }
 
 .returns-text {
@@ -119,7 +122,8 @@
 }
 
 .cart-link {
-  color: white;
+  /* color: white; */
+  color: #666;
   display: flex;
   align-items: center;
   position: relative;
@@ -136,14 +140,15 @@
 }
 
 .cart-quantity {
-  color: rgb(240, 136, 4);
+  /* color: rgb(240, 136, 4); */
+  color: #666;
   font-size: 16px;
   font-weight: 700;
 
   position: absolute;
   top: 4px;
   left: 22px;
-  
+
   width: 26px;
   text-align: center;
 }
